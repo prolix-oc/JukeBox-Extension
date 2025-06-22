@@ -1,0 +1,13 @@
+{
+    "display_name": "Roon JukeBox",
+    "loading_order": 100,
+    "requires": [],
+    "optional": [],
+    "js": "dist/index.js",
+    "css": "",
+    "author": "Prolix OCs",
+    "version": "1.0.0",
+    "homePage": "https://github.com/prolix-oc/JukeBox-Extension",
+    "auto_update": false,
+    "generate_interceptor": "roon_setCurrentTrack"
+}

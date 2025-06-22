@@ -1,0 +1,20 @@
+.field-sizing {
+    field-sizing: content;
+}
+
+#roon_jukebox_settings small {
+    color: var(--SmartThemeQuoteColor);
+    font-style: italic;
+    display: block;
+    margin-top: 4px;
+}
+
+#roon_jukebox_settings .radio_group label {
+    margin-bottom: 8px;
+}
+
+#roon_jukebox_settings hr {
+    margin: 16px 0;
+    border: none;
+    border-top: 1px solid var(--SmartThemeBorderColor);
+}

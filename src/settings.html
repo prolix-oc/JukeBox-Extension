@@ -1,0 +1,86 @@
+<div id="roon_jukebox_settings">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>
+                <span>Roon JukeBox</span>
+            </b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <div>
+                <label for="roon_template">Injection Template</label>
+                <textarea id="roon_template" class="text_pole textarea_compact" rows="3" placeholder="Template for injecting music information into prompts. Available variables: {{song}}, {{artist}}, {{album}}, {{zone}}, {{status}}, {{lyrics}}, {{syncedLyrics}}, {{instrumental}}"></textarea>
+                <small>Available variables: {{song}}, {{artist}}, {{album}}, {{zone}}, {{status}}, {{lyrics}}, {{syncedLyrics}}, {{instrumental}}</small>
+            </div>
+            <div>
+                <label class="checkbox_label" for="roon_include_lyrics">
+                    <input id="roon_include_lyrics" type="checkbox" />
+                    <span>Include Lyrics in Context</span>
+                </label>
+                <small>When enabled, lyrics will be fetched and included in the {{lyrics}} variable</small>
+            </div>
+            <div>
+                <label for="roon_poll_interval">Polling Interval (ms)</label>
+                <input type="number" id="roon_poll_interval" class="text_pole" min="1000" max="30000" step="1000" />
+                <small>How often to check for track changes (minimum 1000ms)</small>
+            </div>
+            <div>
+                <label class="checkbox_label" for="roon_scan">
+                    <input id="roon_scan" type="checkbox" />
+                    <span>Include in World Info Scanning</span>
+                </label>
+            </div>
+            <div>
+                <label for="roon_position">Injection Position</label>
+                <div class="radio_group">
+                    <label>
+                        <input type="radio" name="roon_position" value="-1" />
+                        <span data-i18n="None (not injected)">None (not injected)</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="roon_position" value="2" />
+                        <span data-i18n="Before Main Prompt / Story String">Before Main Prompt / Story String</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="roon_position" value="0" />
+                        <span data-i18n="After Main Prompt / Story String">After Main Prompt / Story String</span>
+                    </label>
+                    <label class="flex-container alignItemsCenter" title="How many messages before the current end of the chat." data-i18n="[title]How many messages before the current end of the chat.">
+                        <input type="radio" name="roon_position" value="1" />
+                        <span data-i18n="In-chat @ Depth">In-chat @ Depth</span> <input id="roon_depth" class="text_pole widthUnset" type="number" min="0" max="999" />
+                        <span data-i18n="as">as</span>
+                        <select id="roon_role" class="text_pole widthNatural">
+                            <option value="0" data-i18n="System">System</option>
+                            <option value="1" data-i18n="User">User</option>
+                            <option value="2" data-i18n="Assistant">Assistant</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <b>Function tools:</b>
+                <label class="checkbox_label" for="roon_tool_get_current_track">
+                    <input id="roon_tool_get_current_track" type="checkbox" />
+                    <span>Get Current Track</span>
+                </label>
+                <label class="checkbox_label" for="roon_tool_get_current_lyrics">
+                    <input id="roon_tool_get_current_lyrics" type="checkbox" />
+                    <span>Get Current Lyrics</span>
+                </label>
+                <label class="checkbox_label" for="roon_tool_search_lyrics">
+                    <input id="roon_tool_search_lyrics" type="checkbox" />
+                    <span>Search Lyrics</span>
+                </label>
+                <label class="checkbox_label" for="roon_tool_check_connection">
+                    <input id="roon_tool_check_connection" type="checkbox" />
+                    <span>Check Connection</span>
+                </label>
+            </div>
+            <hr>
+            <div class="justifyCenter">
+                <small><em>Requires the JukeBox SillyTavern server plugin to be installed and enabled</em></small>
+            </div>
+        </div>
+    </div>
+</div>
